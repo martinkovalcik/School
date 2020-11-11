@@ -1,6 +1,4 @@
-package sk.itsovy.kovalcik.domacaUloha;
-
-import java.util.Scanner;
+package sk.itsovy.kovalcik.inAddition;
 
 public class IpAddress {
 

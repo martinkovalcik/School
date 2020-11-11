@@ -1,6 +1,6 @@
-package sk.itsovy.kovalcik.skola;
+package sk.itsovy.kovalcik.school;
 
-public class lengthOfChars {
+public class LengthOfChars {
     public static void main(String[] args) {
         String data =" Procedural programming is about writing procedures or methods that perform operations on the data, while object-oriented programming is about creating objects that contain both data and methods. " ;
         int pocet = 0;

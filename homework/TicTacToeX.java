@@ -1,4 +1,4 @@
-package sk.itsovy.kovalcik.domacaUloha;
+package sk.itsovy.kovalcik.homework;
 
 import java.util.Scanner;
 

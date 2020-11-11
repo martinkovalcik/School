@@ -1,7 +1,7 @@
-package sk.itsovy.kovalcik.skola.school;
+package sk.itsovy.kovalcik.school.school;
 
-import sk.itsovy.kovalcik.skola.school.animals.*;
-import sk.itsovy.kovalcik.skola.school.hobby.*;
+import sk.itsovy.kovalcik.school.school.animals.*;
+import sk.itsovy.kovalcik.school.school.hobby.*;
 
 import java.time.LocalDate;
 

@@ -1,4 +1,4 @@
-package sk.itsovy.kovalcik.domacaUloha;
+package sk.itsovy.kovalcik.homework;
 
 public class Dividing {
     public static void main(String[] args) {

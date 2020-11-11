@@ -1,4 +1,4 @@
-package sk.itsovy.kovalcik.domacaUloha;
+package sk.itsovy.kovalcik.homework;
 
 public class Odrazenie {
     public int pocetOdrazov(double height,double koeficientodrazu){

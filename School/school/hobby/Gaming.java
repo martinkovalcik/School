@@ -1,4 +1,4 @@
-package sk.itsovy.kovalcik.skola.school.hobby;
+package sk.itsovy.kovalcik.school.school.hobby;
 
 public class Gaming extends Hobby{
     private String genre;

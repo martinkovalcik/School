@@ -1,4 +1,4 @@
-package sk.itsovy.kovalcik.skola.school.animals;
+package sk.itsovy.kovalcik.school.school.animals;
 
 public class Lizard {
     private String name;

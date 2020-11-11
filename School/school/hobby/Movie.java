@@ -1,4 +1,4 @@
-package sk.itsovy.kovalcik.skola.school.hobby;
+package sk.itsovy.kovalcik.school.school.hobby;
 
 public class Movie extends Hobby {
     private int publication;

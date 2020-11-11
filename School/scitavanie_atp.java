@@ -1,8 +1,8 @@
-package sk.itsovy.kovalcik.skola;
+package sk.itsovy.kovalcik.school;
 
 import java.util.Scanner;
 
-public class scitavanie_atp {
+public class Scitavanie_atp {
     public static void main(String[] args) {
         int hodnota=0;
         int a=0;

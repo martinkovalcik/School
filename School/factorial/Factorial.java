@@ -1,4 +1,4 @@
-package sk.itsovy.kovalcik.skola.factorial;
+package sk.itsovy.kovalcik.school.factorial;
 
 public class Factorial {
     public static void main(String[] args) {

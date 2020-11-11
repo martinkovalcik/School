@@ -1,6 +1,4 @@
-package sk.itsovy.kovalcik.skola.school;
-
-import java.util.Objects;
+package sk.itsovy.kovalcik.school.school;
 
 public class Grades {   // extends Object
     private int mat;

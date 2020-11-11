@@ -1,4 +1,4 @@
-package sk.itsovy.kovalcik.skola;
+package sk.itsovy.kovalcik.school;
 
 public class Matice {
 
