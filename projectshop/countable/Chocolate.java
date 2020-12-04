@@ -1,6 +1,7 @@
 package sk.itsovy.kovalcik.projectshop.countable;
 
 import sk.itsovy.kovalcik.projectshop.Item;
+import sk.itsovy.kovalcik.projectshop.util.Util;
 
 public class Chocolate extends Item implements CountItem {
     private int count;
@@ -18,5 +19,10 @@ public class Chocolate extends Item implements CountItem {
     @Override
     public int getCount() {
         return count;
+    }
+
+    @Override
+    public String toString() {
+        return "Apple: "+getName()+" ,Price per KG: "+getPrice()+" ,Count: "+count+" , Price: "+ Util.formatPrice(getItemPrice());
     }
 }
