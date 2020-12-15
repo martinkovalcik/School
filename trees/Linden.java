@@ -10,4 +10,6 @@ public class Linden extends Tree{
     public void description() {
         System.out.println("Neviem ani čo som vlastne");
     }
+
+
 }

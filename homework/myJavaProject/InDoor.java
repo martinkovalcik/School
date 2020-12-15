@@ -1,3 +1,4 @@
+/*
 package sk.itsovy.kovalcik.homework.myJavaProject;
 
 public interface InDoor {
@@ -9,3 +10,4 @@ class Hockey implements InDoor{
         System.out.println("Its very cooold");
     }
 }
+*/
