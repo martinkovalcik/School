@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Database {
+public class Mysql {
     private String url="jdbc:mysql://localhost:3306/test";
     private String username="root";
     private String password="";
@@ -173,5 +173,86 @@ return cityList;
             e.printStackTrace();
         }
         return null;
+    }
+}
+
+    public int cityExist(String code3, String cityname ){
+        if (code3==null || cityname==null || code3.equals("") || cityname.equals("")){
+            return -1;
+        }else {
+            String query="SELECT id FROM city WHERE CountryCode LIKE ? AND name LIKE ? ";
+            Connection conn=null;
+            try {
+                conn=getConnection();
+                PreparedStatement ps= conn.prepareStatement(query);
+                ps.setString(1, code3);
+                ps.setString(2, cityname);
+                ResultSet rs=ps.executeQuery();
+                System.out.println(ps);
+                if (rs.next()){
+                    int id=rs.getInt("id");
+                    conn.close();
+                    return  id;
+                }else {
+                    conn.close();
+                    return -1;
+                }
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+        return 0;
+    }
+    public List<Monument>  getMonuments(){
+        String query="";
+        List<Monument> monumentList=new ArrayList<>();
+        try {
+            Connection conn=getConnection();
+            if (conn!=null){
+                System.out.println("Success");
+                PreparedStatement ps= conn.prepareStatement(query);
+                System.out.println(ps);
+                //   ps.setString(1, );
+                ResultSet rs=ps.executeQuery();
+                while(rs.next()){
+                    String country=rs.getString("Country");
+                    String name= rs.getString("Name");
+                    String monument=rs.getString("Monument");
+                    int monumentID=rs.getInt("MonumentId");
+                }
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    public boolean insertNewMonument( String code3, String city, String name ){
+        if (name==null || name.equals("")){
+            return false;
+        }else{
+            int cityID=cityExist(code3, city);
+            if(cityID==-1){
+                return false;
+            }else {
+                String query="INSERT INTO monument(name, city) VALUES (?, ?)";
+                try {
+                    Connection conn=getConnection();
+                    PreparedStatement ps= conn.prepareStatement(query);
+                    ps.setString(1, name);
+                    ps.setInt(2, cityID);
+                    ps.executeUpdate();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }
+        return true;
     }
 }
